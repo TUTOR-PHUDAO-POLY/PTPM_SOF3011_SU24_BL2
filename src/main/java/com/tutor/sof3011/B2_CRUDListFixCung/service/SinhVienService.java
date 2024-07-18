@@ -13,20 +13,37 @@ public class SinhVienService {
     // C1: List -> static
     // C2: List -> vao contructor cua doi tuong service
 
-    private List<SinhVien>listSinhVien = new ArrayList<>();
+    private List<SinhVien> listSinhVien = new ArrayList<>();
 
     public SinhVienService() {
         // fake data o trong contructor
         // thu tu contructor all tham so -> phu thuoc vao thuc tu khi minh khai bao bien
         // su dung lombox
-        listSinhVien.add(new SinhVien("HE130461","Nguyen van a","Ha noi",10,true));
-        listSinhVien.add(new SinhVien("HE130462","Nguyen van b","Ha noi1",11,false));
-        listSinhVien.add(new SinhVien("HE130463","Nguyen van c","Ha noi2",12,true));
-        listSinhVien.add(new SinhVien("HE130464","Nguyen van d","Ha noi3",13,false));
-        listSinhVien.add(new SinhVien("HE130465","Nguyen van e","Ha noi4",15,true));
+        listSinhVien.add(new SinhVien("HE130461", "Nguyen van a", "Ha noi", 10, true));
+        listSinhVien.add(new SinhVien("HE130462", "Nguyen van b", "Ha noi1", 11, false));
+        listSinhVien.add(new SinhVien("HE130463", "Nguyen van c", "Ha noi2", 12, true));
+        listSinhVien.add(new SinhVien("HE130464", "Nguyen van d", "Ha noi3", 13, false));
+        listSinhVien.add(new SinhVien("HE130465", "Nguyen van e", "Ha noi4", 15, true));
     }
 
     public List<SinhVien> getListSinhVien() {
         return listSinhVien;
     }
+
+    public void add(SinhVien sv) {
+        listSinhVien.add(sv);
+    }
+
+    public SinhVien detail(int index) {
+        return listSinhVien.get(index);
+    }
+
+    public void remove(int index) {
+        listSinhVien.remove(index);
+    }
+
+    public void update(int index, SinhVien sv) {
+        listSinhVien.set(index, sv);
+    }
+
 }
