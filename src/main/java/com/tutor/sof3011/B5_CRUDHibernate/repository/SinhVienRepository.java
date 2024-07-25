@@ -75,4 +75,8 @@ public class SinhVienRepository {
             s.getTransaction().rollback();;
         }
     }
+
+    public static void main(String[] args) {
+        System.out.println(new SinhVienRepository().getAll());
+    }
 }

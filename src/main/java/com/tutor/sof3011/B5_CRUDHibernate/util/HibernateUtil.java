@@ -1,5 +1,6 @@
 package com.tutor.sof3011.B5_CRUDHibernate.util;
 
+import com.tutor.sof3011.B5_CRUDHibernate.entity.SinhVien2;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -25,6 +26,8 @@ public class HibernateUtil {
         properties.put(Environment.SHOW_SQL, "true");
 
         conf.setProperties(properties);
+        // dang ky vs hibernate cac thuc the duoc mapping su dung
+        conf.addAnnotatedClass(SinhVien2.class);
 
         ServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .applySettings(conf.getProperties()).build();
